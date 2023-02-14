@@ -12,7 +12,7 @@ def index():
                 "nombre":"img2",
                 "descripcion": "nada"
                }
-            ]
+    ]
     return jsonify(imagenes)
 
 if __name__ == '__main__':
