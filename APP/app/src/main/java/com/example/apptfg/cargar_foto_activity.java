@@ -11,6 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class cargar_foto_activity extends AppCompatActivity {
 
     ImageView imagen;
@@ -28,6 +32,7 @@ public class cargar_foto_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 cargarI();
+
             }
         });
         //-------------------------------
@@ -40,6 +45,7 @@ public class cargar_foto_activity extends AppCompatActivity {
         Intent i= new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         i.setType("image/");
         startActivityForResult(i.createChooser(i,"Seleccione foto"),10);
+
     }
 
     @Override
